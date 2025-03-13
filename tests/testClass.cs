@@ -36,28 +36,29 @@ namespace SeleniumFramework.tests
         [Test]
         public void testHomePage()
         {
+            // this has been changed by het
             TestContext.WriteLine(String.Format("Launching App {0}",  testData.AppURL));
             home.openHome(testData.AppURL);
             home.isHomePageLoaded().Should().BeTrue();
-            TestContext.WriteLine("App is launched successfully");
+            TestContext.WriteLine("Application is launched successfully");
         }
         [Test]
         public void testGoToFeaturePage()
         {
             home.openHome(testData.AppURL);
-            TestContext.WriteLine("App is launched successfully");
+            TestContext.WriteLine("Application is launched successfully");
             home.clickResourceMenu().Should().BeTrue();
-            TestContext.WriteLine("Clicked on Resource Menu");
+            TestContext.WriteLine("Clicked on Resource Menu.");
             home.clickFeatureMenu().Should().BeTrue();
-            TestContext.WriteLine("Clicked on Feature Menu");
+            TestContext.WriteLine("Clicked on Feature Menu.");
         }
         [Test]
         public void testFeaturePage()
         {
             home.openHome(testData.AppURL);
-            TestContext.WriteLine("App is launched successfully");
+            TestContext.WriteLine("Application is launched successfully");
             home.clickResourceMenu().Should().BeTrue();
-            TestContext.WriteLine("Clicked on Resource Menu");
+            TestContext.WriteLine("Clicked on Resource Menu.");
             home.clickFeatureMenu().Should().BeTrue();
             TestContext.WriteLine("Clicked on Feature Menu");
             gettingStarted.isFeaturePageLoaded().Should().BeTrue();
